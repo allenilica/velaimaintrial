@@ -161,8 +161,9 @@ em { font-style: italic; }
   top: var(--promo-h, 42px); left: 0; right: 0;
   z-index: 200;
   padding: 22px 0;
+  background: #09080b;
+  border-bottom: 1px solid var(--border);
   transition: background 0.35s ease, border-color 0.35s ease, padding 0.35s ease;
-  border-bottom: 1px solid transparent;
 }
 
 /* Blur lives on ::before so it doesn't create a stacking context that traps
@@ -180,8 +181,7 @@ em { font-style: italic; }
 }
 
 .nav.scrolled {
-  background: rgba(9,8,11,0.88);
-  border-bottom-color: var(--border);
+  background: rgba(9,8,11,0.95);
   padding: 14px 0;
 }
 
@@ -658,7 +658,7 @@ em { font-style: italic; }
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: var(--promo-h, 42px); left: 0; right: 0; bottom: 0;
     background: rgba(9,8,11,0.97);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -692,7 +692,7 @@ em { font-style: italic; }
   .section { padding: 72px 0; }
   .section__header { margin-bottom: 44px; }
 
-  .hero__inner { padding-top: 88px; padding-bottom: 56px; }
+  .hero__inner { padding-top: calc(var(--promo-h, 42px) + 46px); padding-bottom: 56px; }
   .hero__content { gap: 18px; }
   .hero__subtext { font-size: 0.96rem; }
 
@@ -711,7 +711,7 @@ em { font-style: italic; }
   .section { padding: 56px 0; }
   .section__header { margin-bottom: 32px; gap: 10px; }
 
-  .hero__inner { padding-top: 76px; padding-bottom: 48px; }
+  .hero__inner { padding-top: calc(var(--promo-h, 42px) + 34px); padding-bottom: 48px; }
   .hero__cta { flex-direction: column; gap: 10px; }
   .btn--lg { width: 100%; justify-content: center; }
   .vials-display { padding: 20px 14px 18px; }
