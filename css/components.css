@@ -771,3 +771,112 @@
   .kit-vl__foot { width: 22px; }
   .kit-tray__vials { gap: 14px; }
 }
+
+.price-was {
+  font-size: 0.82em;
+  color: var(--muted);
+  opacity: 0.75;
+  margin-right: 6px;
+  font-weight: 500;
+  text-decoration: line-through;
+  text-decoration-color: rgba(201,169,110,0.7);
+  text-decoration-thickness: 2px;
+}
+
+.price-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(201,169,110,0.15);
+  border: 1px solid var(--border-gold);
+  color: var(--gold);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.promo-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 201;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #1a1508 0%, #110f0a 50%, #1a1508 100%);
+  border-bottom: 1px solid var(--border-gold);
+  padding: 0 24px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+.promo-bar strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+.promo-bar a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-left: 8px;
+  white-space: nowrap;
+}
+.promo-bar a:hover { opacity: 0.75; }
+
+.form-error {
+  font-size: 0.8rem;
+  color: #e07070;
+  min-height: 1.2em;
+  line-height: 1.4;
+}
+
+.phone-row {
+  display: flex;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+.phone-row:focus-within {
+  border-color: var(--border-gold);
+  background: rgba(201,169,110,0.04);
+}
+.dial-select {
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--border);
+  padding: 13px 10px 13px 14px;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--text);
+  outline: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 108px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23888' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+.dial-select option {
+  background: #0d0b10;
+  color: var(--text);
+}
+.phone-row input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 13px 16px;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--text);
+  outline: none;
+  width: 100%;
+}
+.phone-row input::placeholder { color: rgba(255,255,255,0.2); }
