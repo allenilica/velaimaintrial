@@ -802,18 +802,20 @@
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 201;
-  height: 42px;
+  min-height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(90deg, #1a1508 0%, #110f0a 50%, #1a1508 100%);
   border-bottom: 1px solid var(--border-gold);
-  padding: 0 24px;
+  padding: 10px 24px;
   text-align: center;
   font-size: 0.82rem;
   color: var(--muted);
   letter-spacing: 0.02em;
+  box-sizing: border-box;
 }
+.promo-bar p { margin: 0; line-height: 1.5; }
 .promo-bar strong {
   color: var(--gold);
   font-weight: 600;
@@ -822,10 +824,17 @@
   color: var(--gold);
   text-decoration: underline;
   text-underline-offset: 3px;
-  margin-left: 8px;
+  margin-left: 6px;
   white-space: nowrap;
 }
 .promo-bar a:hover { opacity: 0.75; }
+.promo-short { display: none; }
+.promo-full  { display: inline; }
+@media (max-width: 600px) {
+  .promo-full  { display: none; }
+  .promo-short { display: inline; }
+  .promo-bar   { font-size: 0.78rem; padding: 8px 16px; }
+}
 
 .form-error {
   font-size: 0.8rem;
