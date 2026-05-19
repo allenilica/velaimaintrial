@@ -121,6 +121,17 @@ function initHeroParallax() {
 }
 
 // ── Init ────────────────────────────────────────────────────────────────
+
+// ── Promo bar height sync ───────────────────────────────────────────────
+function syncPromoHeight() {
+  const bar = document.querySelector('.promo-bar');
+  if (bar) {
+    document.documentElement.style.setProperty('--promo-h', bar.offsetHeight + 'px');
+  }
+}
+window.addEventListener('resize', syncPromoHeight, { passive: true });
+syncPromoHeight();
+
 document.addEventListener('DOMContentLoaded', () => {
   onScroll();
   initReveal();
